@@ -5,11 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Kiwi</title>
+    <title>SMM</title>
 </head>
 
 <body>
+    <div class="container max-w-[1440px] mx-auto">
+        <div class="bg-[#F9F9F9]">
+            <div id="mobile-nav" class="px-4 h-[64px] flex justify-between items-center  z-50 md:hidden">
+                <img src="./icons/Logo.svg" alt="">
+                <div class="flex gap-x-[20px]">
+                    <p>Быстрый заказ</p>
+                    <img src="./images/Burger menu.png" alt="">
+                </div>
+            </div>
 
+            <nav id="navbar"
+                class="md:flex xl:px-[120px] md:px-[50px] lg:[80px] h-[92px] justify-between items-center hidden">
+                <div class="flex gap-x-[32px] items-center">
+                    <img src="./icons/Logo.svg" alt="">
+                    <div class="flex gap-x-[28px] items-center">
+                        <p class="text-[16px] text-[#212121] font-normal">Услуги</p>
+                        <p class="text-[16px] text-[#212121] font-normal">Отзывы</p>
+                        <p class="text-[16px] text-[#212121] font-normal hidden lg:block">Как это работает</p>
+                        <p class="text-[16px] text-[#212121] font-normal">Преимущества</p>
+                        <p class="text-[16px] text-[#212121] font-normal hidden lg:block">Частые вопросы</p>
+                    </div>
+                </div>
+                <div class="flex gap-x-[16px] items-center">
+                    <button
+                        class="w-[86px] h-[52px] rounded-[16px] border-1 border-solid border-[#FF772D] text-[#FF772D]">Войти</button>
+                    <button
+                        class="w-[154px] h-[52px] rounded-[16px]  bg-[#FF772D] text-[#FFFFFF] shadow-red-400">Быстрый
+                        заказ</button>
+                </div>
+            </nav>
+
+            <main>
+                <h1>Продвижение
+                    во всех соцсетях
+                    за пару кликов</h1>
+            </main>
+        </div>
+    </div>
 </body>
+
+<script>
+    const mobile = document.getElementById("mobile-nav");
+    const navbar = document.getElementById("navbar");
+
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+            mobile.classList.add("bg-white", "shadow-md");
+            navbar.classList.add("bg-white", "shadow-md");
+        } else {
+            mobile.classList.remove("bg-white", "shadow-md");
+            navbar.classList.remove("bg-white", "shadow-md");
+        }
+    });
+
+</script>
 
 </html>
